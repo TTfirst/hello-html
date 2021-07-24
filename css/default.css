@@ -4,6 +4,7 @@
 }
 a {
     text-decoration: none;
+    color: white;
 }
 li {
     list-style: none;
@@ -16,7 +17,9 @@ li {
 }
 .header {
     height: 100px;
-    /* background-color: green; */
+    background-color: rgba(128, 0, 128, 0.363);
+    color: white;
+    margin-bottom: 10px;
 }
 .up {
     height: 70px;
@@ -25,7 +28,7 @@ li {
     float: left;
     width: 400px;
     height: 70px;
-    color: rgba(112, 9, 98, 0.452);
+    color: white;
     font-size: 18px;
     text-align: center;
     line-height: 70px;
@@ -85,6 +88,9 @@ input {
 .im img {
     width: 100%;
 }
+.end {
+    height: 354px;
+}
 .end div {
     width: 32%;
     float: left;
@@ -114,7 +120,7 @@ input {
     width: 100%;
     border-top: 1px solid green;
     overflow: hidden;
-    padding-top: 20px;
+    margin-top: 34px;
 }
 .bottom div {
     float: left;
