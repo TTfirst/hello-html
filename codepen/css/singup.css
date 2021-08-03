@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: url(https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558/Codepen/waldemar-brandt-aThdSdgx0YM-unsplash_cnq4sb.jpg)
-        no-repeat center center;
+    background: url(../images/mountain.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 }
