@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../css/singup.css">
+    <script src="../js/sign-up.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">
+            <div class="change display_one" id="change_one">SIGN IN</div>
+            <div class="big_one" id="big_one">
+                <div class="left_cover">
+                    <h2>Sign In</h2>
+                    <form action="">
+                        <input type="text" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <p>Forgot your password?</p>
+                        <input type="submit" value="SIGN IN" class="last">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="change display_two" id="change_two">SIGN UP</div>
+            <div class="big_two" id="big_two">
+                <div class="enter">
+                    <h2>Sign Up</h2>
+                    <form action="">
+                        <input type="text" placeholder="User">
+                        <input type="text" placeholder="Email">
+                        <input type="passwod" placeholder="passwod">
+                        <input type="submit" value="SIGN UP" class="last" id="last">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var change_one = document.querySelector("#change_one");
+        var change_two = document.querySelector("#change_two");
+        var big_one = document.querySelector("#big_one");
+        var big_two = document.querySelector("#big_two");
+        console.log("1234567")
+        change_one.onclick = function () {
+            console.log("1234")
+            big_two.style.display = "none";
+            big_one.style.display = "block";
+            change_one.style.display = "none";
+            change_two.style.display = "block";
+        }
+        change_two.onclick = function () {
+            big_two.style.display = "block";
+            big_one.style.display = "none";
+            change_one.style.display = "block";
+            change_two.style.display = "none";
+        }
+        //阻止默认行为
+        var input = document.querySelector("#last");
+        console.log(input);
+        input.addEventListener("click", function (e) {
+            e.preventDefault();
+        })
+    </script>
+</body>
+
+</html>
