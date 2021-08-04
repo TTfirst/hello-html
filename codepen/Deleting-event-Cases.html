@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除事件</title>
+    <style>
+        p {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Click on buttons to add or remove columns/rows</p>
+    <button id="btn1">+Col</button>
+    <button id="btn2">+Row</button>
+    <table border="0">
+        <thead>
+            <tr id="one">
+                <td><button>Remove row</button></td>
+                <td>EN:</td>
+                <td><input type="text">
+                    <button>Remove</button>
+                </td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+
+        var btn1 = document.querySelector("#btn1");
+        var tbody = document.querySelector("tbody");
+        var tr = document.querySelector("#one");
+        btn1.addEventListener("click", function () {
+            var trs = document.createElement("tr");
+            tbody.appendChild(trs);
+            for (var i = 0; i < 3; i++) {
+                var tds = document.createElement("td");
+                trs.appendChild(tds);
+            }
+            console.log(trs.children.length);
+            for (var i = 0; i < trs.children; i++) {
+                trs.children[0] = tr.children[0].innerHTML;
+            }
+            // var td_s = document.querySelectorAll("td");
+            // td_s[3].innerHTML = tr.children[0].innerHTML;
+            // console.dir(tr.children[0]);
+            // td_s[4].innerHTML = tr.children[1].innerHTML;
+            // td_s[5].innerHTML = tr.children[2].innerHTML;
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table-two</title>
+    <style>
+        table {
+            width: 650px;
+            border: 1px solid #777;
+            margin: 50px auto;
+            border-collapse: collapse;
+            box-sizing: border-box;
+        }
+
+        thead {
+            background-color: rgb(52, 152, 219);
+            text-align: left;
+            color: white;
+        }
+
+        td,
+        th {
+            height: 40px;
+            padding-left: 8px;
+        }
+
+        tbody tr:nth-child(2n-1) {
+            background-color: rgb(238, 238, 238);
+        }
+    </style>
+</head>
+
+<body>
+    <table cellpadding="0" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job Title</th>
+                <th>Twitter</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>James</td>
+                <td>Matman</td>
+                <td>Chief Sandwich Eater</td>
+                <td>@James</td>
+            </tr>
+            <tr>
+                <td>Andor</td>
+                <td>Nagy</td>
+                <td>Designer</td>
+                <td>@andornagy</td>
+            </tr>
+            <tr>
+                <td>Tamas</td>
+                <td>Biro</td>
+                <td>Game Tester</td>
+                <td>@tamas</td>
+            </tr>
+            <tr>
+                <td>Tamas</td>
+                <td>Biro</td>
+                <td>Game Tester</td>
+                <td>@tamas</td>
+            </tr>
+            <tr>
+                <td>James</td>
+                <td>Matman</td>
+                <td>Chief Sandwich Eater</td>
+                <td>@James</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
