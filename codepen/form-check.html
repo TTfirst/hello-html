@@ -8,6 +8,11 @@
     <title>表单综合案例</title>
     <script src="js/form-check.js"></script>
     <style>
+        .big {
+            margin: 100px auto;
+            width: 600px;
+        }
+
         table {
             border: 1px solid blue;
         }
@@ -15,105 +20,107 @@
 </head>
 
 <body>
-    <h3>青春不常在，抓紧谈恋爱</h3>
-    <table>
-        <tr>
-            <td>性别</td>
-            <td id="L-sex">
-                <input type="radio" name="sex" id="nan"><label for="nan"> 男</label>
-                <input type="radio" name="sex" ID="nv"><label for="nv"> 女</label>
-            </td>
-        </tr>
-        <tr>
-            <td>生日</td>
-            <td>
-                <select id="year">
-                    <option>--请选择年--</option>
-                    <option>2001</option>
-                    <option>2002</option>
-                    <option>2003</option>
-                </select>
+    <div class="big">
+        <h3>青春不常在，抓紧谈恋爱</h3>
+        <table>
+            <tr>
+                <td>性别</td>
+                <td id="L-sex">
+                    <input type="radio" name="sex" id="nan"><label for="nan"> 男</label>
+                    <input type="radio" name="sex" ID="nv"><label for="nv"> 女</label>
+                </td>
+            </tr>
+            <tr>
+                <td>生日</td>
+                <td>
+                    <select id="year">
+                        <option>--请选择年--</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                        <option>2003</option>
+                    </select>
 
 
-                <select id="month">
-                    <option>--请选择月--</option>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                </select>
+                    <select id="month">
+                        <option>--请选择月--</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                    </select>
 
 
-                <select id="day">
-                    <option>--请选择日--</option>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                    <option>06</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                所在地区
-            </td>
-            <td><input type="text" value="北京思密达" id="local"> </td>
-        </tr>
-        <tr>
-            <td>婚姻状况</td>
-            <td id="marry">
-                <input type="radio" name="marrage" id="weihun"><label for="weihun">未婚</label>
-                <input type="radio" name="marrage" id="yihun"><label for="yihun">已婚</label>
-                <input type="radio" name="marrage" id="lihun"><label for="lihun">离婚</label>
-            </td>
-        </tr>
-        <tr>
-            <td>学历</td>
-            <td><input type="text" value="幼儿园" id="academic"> </td>
-        </tr>
-        <tr>
-            <td>喜欢的类型</td>
-            <td id='hobby'><input type="checkbox" id="wu">
-                <labelfor="wu">妩媚的</label>
-                    <input type="checkbox" id="ke"><label for="ke">可爱的</label>
-                    <input type="checkbox" id="xiao"><label for="xiao">小鲜肉</label>
-                    <input type="checkbox" id="lao"><label for="lao">老腊肉</label>
-                    <input type="checkbox" id="dou"><label for="dou">都喜欢</label>
-            </td>
-        </tr>
-        <tr>
-            <td>自我介绍</td>
-            <td><textarea row="3" cols="20" id="te">自我介绍</textarea></td>
-        </tr>
-        <td></td>
-
-        <td><input type="submit" value="免费注册" onclick="myCheck()"></td>
-        </tr>
-        <tr>
+                    <select id="day">
+                        <option>--请选择日--</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    所在地区
+                </td>
+                <td><input type="text" value="北京思密达" id="local"> </td>
+            </tr>
+            <tr>
+                <td>婚姻状况</td>
+                <td id="marry">
+                    <input type="radio" name="marrage" id="weihun"><label for="weihun">未婚</label>
+                    <input type="radio" name="marrage" id="yihun"><label for="yihun">已婚</label>
+                    <input type="radio" name="marrage" id="lihun"><label for="lihun">离婚</label>
+                </td>
+            </tr>
+            <tr>
+                <td>学历</td>
+                <td><input type="text" value="幼儿园" id="academic"> </td>
+            </tr>
+            <tr>
+                <td>喜欢的类型</td>
+                <td id='hobby'><input type="checkbox" id="wu">
+                    <labelfor="wu">妩媚的</label>
+                        <input type="checkbox" id="ke"><label for="ke">可爱的</label>
+                        <input type="checkbox" id="xiao"><label for="xiao">小鲜肉</label>
+                        <input type="checkbox" id="lao"><label for="lao">老腊肉</label>
+                        <input type="checkbox" id="dou"><label for="dou">都喜欢</label>
+                </td>
+            </tr>
+            <tr>
+                <td>自我介绍</td>
+                <td><textarea row="3" cols="20" id="te">自我介绍</textarea></td>
+            </tr>
             <td></td>
-            <td><input type="checkbox" id="rule">我同意注册条款和会员加入标准</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <a href="gongsijianjie.html">我是会员,立即登入</a>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <h2>我承诺</h2>
-                <ul>
-                    <li>年满十八岁</li>
-                    <li>抱着严肃的态度</li>
-                    <li>真诚寻找另一半</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
+
+            <td><input type="submit" value="免费注册" onclick="myCheck()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" id="rule">我同意注册条款和会员加入标准</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="gongsijianjie.html">我是会员,立即登入</a>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h2>我承诺</h2>
+                    <ul>
+                        <li>年满十八岁</li>
+                        <li>抱着严肃的态度</li>
+                        <li>真诚寻找另一半</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>营销号生成器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            position: relative;
+            list-style: none;
+            margin-bottom: 18px;
+            margin-left: 270px;
+        }
+
+        ul {
+            float: left;
+        }
+
+        ul li h1 {
+            font-weight: 400;
+            font-size: 40px;
+        }
+
+        ul li label {
+            font-weight: 700;
+        }
+
+        ul li input {
+            width: 350px;
+            height: 35px;
+            padding-left: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul li .same {
+            position: absolute;
+            left: 100px;
+            width: 110px;
+            height: 35px;
+            border: 1px solid orange;
+            font-size: 14px;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        ul li button {
+            width: 57px;
+            height: 35px;
+            background-color: rgb(0, 123, 255);
+            color: white;
+            border: 0;
+            border-radius: 3px;
+        }
+
+        ul li button:hover {
+            background-color: rgb(6, 89, 179);
+
+        }
+
+        .right {
+            width: 510px;
+            border: 1px solid #777;
+            float: left;
+            margin-left: 40px;
+            margin-top: 70px;
+        }
+
+        .right p {
+            text-indent: 2em;
+            line-height: 25px;
+        }
+
+        .big {
+            height: 347px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .bottom {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bottom p {
+            padding-bottom: 5px;
+        }
+
+        .bottom a {
+            text-decoration: none;
+            color: rgb(0, 144, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <form action="">
+            <ul>
+                <li>
+                    <h1>营销号生成器</h1>
+                </li>
+                <li>
+                    <label for="">主体:</label><br>
+                    <input type="text" placeholder="桃子核">
+                    <div class="same one">请填写此字段!</div>
+                </li>
+                <li>
+                    <label for="">事件:</label><br>
+                    <input type="text" placeholder="不能吞下去">
+                    <div class="same two"></div>
+                </li>
+                <li>
+                    <label for="">另一种说法:</label><br>
+                    <input type="text" placeholder="核桃太大了，吞下去容易噎着">
+                    <div class="same three"></div>
+                </li>
+                <li>
+                    <button>生成</button>
+                </li>
+            </ul>
+        </form>
+        <div class="right">
+            <p>桃子核不能吞下去是怎么回事呢？桃子核相信大家都很熟悉，但是桃子核不能吞下去是怎么回事呢，下面就让小编带大家一起了解吧。</p>
+            <p>桃子核不能吞下去，其实就是核桃太大了，容易噎着，大家可能会很惊讶桃子核怎么会不能吞下去呢？但事实就是这样，小编也感到非常惊讶。</p>
+            <p>这就是关于桃子核不能吞下去的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！</p>
+        </div>
+    </div>
+    <div class="bottom">
+        <p>
+            Made by: Kasei
+        </p>
+        <a href="#">
+            大陆镜像
+        </a>
+    </div>
+    <script>
+        var inputs = document.querySelectorAll("input");
+        var one = document.querySelector(".one");
+        var two = document.querySelector(".two");
+        var three = document.querySelector(".three")
+        var btn = document.querySelector("button");
+        console.log(divs);
+        console.log(inputs);
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].onfocus = function () {
+                //console.log("得到了");
+                this.style.border = "1px solid #ccc";
+                this.style.backgroundColor = "pink"
+            }
+            inputs[i].onblur = function () {
+                //console.log("失去了");
+                this.style.borderColor = "1px solid green";
+                this.style.backgroundColor = "";
+            }
+        }
+        //----------------------------------------------------------
+        for (var i = 0; i < inputs.length; i++) {
+            btn.addEventListener("click", function () {
+                if (inputs[i].value == "") {
+
+                }
+            })
+            a
+        }
+
+    </script>
+</body>
+
+</html>
