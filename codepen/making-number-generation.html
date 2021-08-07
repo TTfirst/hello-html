@@ -129,17 +129,17 @@
                 </li>
                 <li>
                     <label for="">主体:</label><br>
-                    <input type="text" placeholder="桃子核">
+                    <input type="text" placeholder="桃子核" onkeydown="myKey('one')">
                     <div class="same one">请填写此字段!</div>
                 </li>
                 <li>
                     <label for="">事件:</label><br>
-                    <input type="text" placeholder="不能吞下去">
+                    <input type="text" placeholder="不能吞下去" onkeydown="myKey('two')">
                     <div class="same two">请填写此字段!</div>
                 </li>
                 <li>
                     <label for="">另一种说法:</label><br>
-                    <input type="text" placeholder="核桃太大了，吞下去容易噎着">
+                    <input type="text" placeholder="核桃太大了，吞下去容易噎着" onkeydown="myKey('three')">
                     <div class="same three">请填写此字段!</div>
                 </li>
                 <li>
@@ -182,11 +182,25 @@
             for (var i = 0; i < inputs.length; i++) {
                 if (inputs[i].value == "") {
                     divs[i].style.display = "block";
+                    return;
                 } else {
                     divs[i].style.display = "none";
                 }
+
             }
         })
+        // for (var i = 0; i < inputs.length; i++) {
+        //     console.log(i);
+        //     inputs[i].addEventListener("keydown", function () {
+        //         console.log(divs[i]);
+        //         divs[i].style.display = "none";
+        //     })
+        // }
+
+        function myKey(x) {
+            var one = document.querySelector("." + x);
+            one.style.display = "none";
+        }
     </script>
 
 </body>
