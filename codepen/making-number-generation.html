@@ -36,6 +36,7 @@
         ul li input {
             width: 350px;
             height: 35px;
+            font-size: 14px;
             padding-left: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -46,10 +47,29 @@
             left: 100px;
             width: 110px;
             height: 35px;
-            border: 1px solid orange;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             font-size: 14px;
             text-align: center;
             line-height: 35px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        ul li .one {
+            display: none;
+        }
+
+        .same::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: -16px;
+            left: 16px;
+            border: 8px solid #000;
+            border-bottom-style: solid;
+            border-color: transparent transparent #ccc transparent;
         }
 
         ul li button {
@@ -68,15 +88,15 @@
 
         .right {
             width: 510px;
-            border: 1px solid #777;
+            height: 156px;
+            /* border: 1px solid #777; */
             float: left;
+            font-size: 16px;
             margin-left: 40px;
             margin-top: 70px;
-        }
-
-        .right p {
-            text-indent: 2em;
-            line-height: 25px;
+            padding-top: 5px;
+            resize: none;
+            overflow: hidden;
         }
 
         .big {
@@ -115,23 +135,23 @@
                 <li>
                     <label for="">事件:</label><br>
                     <input type="text" placeholder="不能吞下去">
-                    <div class="same two"></div>
+                    <div class="same two">请填写此字段!</div>
                 </li>
                 <li>
                     <label for="">另一种说法:</label><br>
                     <input type="text" placeholder="核桃太大了，吞下去容易噎着">
-                    <div class="same three"></div>
+                    <div class="same three">请填写此字段!</div>
                 </li>
                 <li>
-                    <button>生成</button>
+                    <button id="btn">生成</button>
                 </li>
             </ul>
         </form>
-        <div class="right">
-            <p>桃子核不能吞下去是怎么回事呢？桃子核相信大家都很熟悉，但是桃子核不能吞下去是怎么回事呢，下面就让小编带大家一起了解吧。</p>
-            <p>桃子核不能吞下去，其实就是核桃太大了，容易噎着，大家可能会很惊讶桃子核怎么会不能吞下去呢？但事实就是这样，小编也感到非常惊讶。</p>
-            <p>这就是关于桃子核不能吞下去的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！</p>
-        </div>
+        <textarea name="" id="right" cols="10" rows="10" class="right">
+    桃子核不能吞下去是怎么回事呢？桃子核相信大家都很熟悉，但是桃子核不能吞下去是怎么回事呢，下面就让小编带大家一起了解吧。
+    桃子核不能吞下去，其实就是核桃太大了，容易噎着，大家可能会很惊讶桃子核怎么会不能吞下去呢？但事实就是这样，小编也感到非常惊讶。
+    这就是关于桃子核不能吞下去的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！
+            </textarea>
     </div>
     <div class="bottom">
         <p>
@@ -143,35 +163,32 @@
     </div>
     <script>
         var inputs = document.querySelectorAll("input");
-        var one = document.querySelector(".one");
-        var two = document.querySelector(".two");
-        var three = document.querySelector(".three")
-        var btn = document.querySelector("button");
-        console.log(divs);
-        console.log(inputs);
-        for (var i = 0; i < inputs.length; i++) {
-            inputs[i].onfocus = function () {
-                //console.log("得到了");
-                this.style.border = "1px solid #ccc";
-                this.style.backgroundColor = "pink"
+        console.log(inputs[0]);
+        var btn = document.querySelector("#btn");
+
+        var textarea = document.querySelector("#right");
+        btn.addEventListener("click", function (e) {
+            if (inputs[0].value == "" || inputs[1].value == "" || inputs[2].value == "") {
+                textarea.innerHTML = textarea.innerHTML;
+            } else {
+                textarea.innerHTML = "&nbsp&nbsp" + inputs[0].value + inputs[1].value + "是怎么回事呢?" + inputs[0].value + "相信大家都很熟悉，但是" + inputs[0].value + inputs[1].value + "是怎么回事呢，下面就让小编带大家一起了解吧。\n" +
+                    "&nbsp&nbsp" + inputs[0].value + inputs[1].value + ",其实就是" + inputs[2].value + ",大家可能会很惊讶" + inputs[0].value + "怎么会" + inputs[1].value + "呢？但事实就是这样，小编也感到非常惊讶。\n" +
+                    "&nbsp&nbsp" + "这就是关于" + inputs[0].value + inputs[1].value + "的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！"
             }
-            inputs[i].onblur = function () {
-                //console.log("失去了");
-                this.style.borderColor = "1px solid green";
-                this.style.backgroundColor = "";
-            }
-        }
-        //----------------------------------------------------------
-        for (var i = 0; i < inputs.length; i++) {
-            btn.addEventListener("click", function () {
+            e.preventDefault();
+        })
+        var divs = document.querySelectorAll(".same");
+        btn.addEventListener("click", function (e) {
+            for (var i = 0; i < inputs.length; i++) {
                 if (inputs[i].value == "") {
-
+                    divs[i].style.display = "block";
+                } else {
+                    divs[i].style.display = "none";
                 }
-            })
-            a
-        }
-
+            }
+        })
     </script>
+
 </body>
 
 </html>
