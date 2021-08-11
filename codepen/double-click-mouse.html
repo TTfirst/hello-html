@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双击鼠标测试页面</title>
+    <style>
+        .head {
+            width: 100%;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .change {
+            width: 40px;
+        }
+
+        #reset {
+            margin-left: 3px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head"></div>
+    <label for="">Clicks:</label>
+    <input type="text" value=0 class="change one"><input type="reset" value="reset" id="reset"><br>
+    <label for="">Fast double click count:</label>
+    <input type="text" value=0 class="change two"><br>
+    <textarea name="" id="text"></textarea>
+    <script>
+        /* var now = new Date()
+            .getTime() / 1000;
+        console.log(now);
+        var s = parseInt(now, 10);//取整
+        console.log(s);
+        var a = (Math.round((now - s) * 1000) / 1000) + '' + s;
+        console.log(a - 0); */
+        //---------------------------------------
+        var body = document.body;
+        console.log(body);
+        var one = document.querySelector(".one");
+        var two = document.querySelector(".two");
+        var text = document.querySelector("#text")
+        body.addEventListener("mousedown", function () {//mousedown鼠标按下触发，不管左键还是右键
+            one.value++;
+            text.value = (one.value - 0) + 1;
+        })
+        var reset = document.querySelector("#reset");
+        reset.addEventListener("click", function (e) {
+            one.value = "0";
+            two.value = "0";
+            text.value = "";
+            e.stopPropagation();//事件冒泡，阻止事件冒泡，向上寻找父元素，利用此对象可阻止向上寻找父元素
+        })
+        /* function microtime(get_as_float) {
+            var now = new Date()
+                .getTime() / 1000;
+            var s = parseInt(now, 10);
+            return (get_as_float) ? now : (Math.round((now - s) * 1000) / 1000) + ' ' + s;
+        } */
+    </script>
+</body>
+
+</html>

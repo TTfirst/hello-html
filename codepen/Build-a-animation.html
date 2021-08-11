@@ -16,21 +16,20 @@
             margin-top: 20px;
         }
 
-        ul {
-            width: 600px;
-            margin-top: 30px;
+        .auto-grid {
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,
+                    minmax(var(--auto-grid-min-size, 14rem), 1fr));
+            grid-gap: var(--auto-grid-gap, 0);
+            padding: 0;
         }
 
         li {
             list-style: none;
-            float: left;
+            /* float: left; */
             /* 给父级添加font-size属性值为0，可以消去图片之间的间隙 */
             font-size: 0;
-        }
-
-        ul li img {
-            width: 200px;
-            height: 180px;
         }
 
         h2 {
@@ -44,7 +43,7 @@
         <h1>Our Team</h1>
         <p>Hover or focus over each card to see the person’s job title slide in and the <br> colour treatment change.
         </p>
-        <ul>
+        <ul class="auto-grid">
             <li>
                 <h2>Anita <br> Simmons</h2>
                 <img src="images/picture1.jpg" alt="">
