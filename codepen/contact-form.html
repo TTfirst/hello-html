@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>触点形式</title>
+    <link rel="stylesheet" href="css/contact-form.css">
+</head>
+
+<body>
+    <div class="form">
+        <form action="">
+            <p class="p1">Colorlib Contact Form</p>
+            <p class="p2">Contact us for custom quote</p>
+            <input type="text" placeholder="name" onkeydown="mykeydown('display-1')"><br>
+            <div class="display1 display-1">请填写此字段！</div>
+            <input type="text" placeholder="Your Email Address" onkeydown="mykeydown('display-2')"><br>
+            <div class="display1 display-2">请填写此字段！</div>
+            <input type="text" placeholder="Your Phone Number(optional)" onkeydown="mykeydown('display-3')"><br>
+            <div class="display1 display-3">请填写此字段！</div>
+            <input type="text" placeholder="Your Web Site(optional)" onkeydown="mykeydown('display-4')"><br>
+            <div class="display1 display-4">请填写此字段！</div>
+            <textarea wrap="soft" name="" id="" cols="30" rows="10" placeholder="Type your message here...."
+                onkeydown="mykeydown('display-5')"></textarea>
+            <div class="display1 display-5">请填写此字段！</div>
+            <button>Submit</button>
+            <p class="p3">Designed by <a href="#">Colorlib</a></p>
+        </form>
+    </div>
+    <script>
+        var btn = document.querySelector("button");
+        var inputs = document.querySelectorAll('input');
+        var divs = document.querySelectorAll('.display1');
+        console.log(divs);
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();//要先阻止默认事件
+        })
+        btn.addEventListener('click', function (e) {
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].value == "") {
+                    divs[i].style.display = "block";
+                    divs[i].style.transition = "display .3s linear";
+                    return;
+                } else {
+                    divs[i].style.display = 'none';
+                }
+            }
+        })
+        function mykeydown(x) {
+            var one = document.querySelector('.' + x);
+            one.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

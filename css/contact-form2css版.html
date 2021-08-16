@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>required和tabindex属性</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(76, 175, 80);
+        }
+
+        .form {
+            position: relative;
+            background-color: rgb(249, 249, 249);
+            width: 430px;
+            height: 540px;
+            margin: 50px auto;
+            padding-left: 22px;
+            padding-top: 16px;
+            box-shadow: 0px 1px 10px -1px #000;
+        }
+
+        form .p1 {
+            font-size: 30px;
+            font-weight: 200;
+            color: rgb(119, 119, 119);
+        }
+
+        form .p2 {
+            margin: 10px 0;
+            color: rgb(119, 139, 186);
+        }
+
+        form input,
+        form button {
+            width: 370px;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        form input,
+        form textarea {
+            border: 1px solid #ccc;
+            padding-left: 8px;
+            outline: none;
+        }
+
+        form input:hover,
+        form textarea:hover {
+            border: 1px solid #aaa;
+            transition: border-color 0.3s linear;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border: 1px solid #aaa;
+        }
+
+        form textarea {
+            width: 370px;
+            height: 120px;
+            margin-top: 10px;
+            padding-top: 5px;
+            /* 不能随意改变大小 */
+            resize: none;
+        }
+
+        form button {
+            color: white;
+            background-color: rgb(76, 175, 80);
+            border: 0;
+            /* cursor属性是指定鼠标的光标 */
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #43a047;
+            transition: background-color 0.3s linear;
+        }
+
+        form button:active {
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+            /* active点击的效果 */
+        }
+
+        .p3 {
+            font-size: 10px;
+            color: #ccc;
+            margin-top: 20px;
+            text-align: center;
+            margin-left: -22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form action="">
+            <p class="p1">Colorlib Contact Form</p>
+            <p class="p2">Contact us for custom quote</p>
+            <input type="text" placeholder="name" required tabindex="1"><br>
+            <input type="email" placeholder="Your Email Address" required tabindex="2"><br>
+            <input type="tel" placeholder="Your Phone Number(optional)" required tabindex="3"><br>
+            <input type="tel" placeholder="Your Web Site(optional)" required tabindex="4"><br>
+            <textarea wrap="soft" name="" id="" cols="30" rows="10" placeholder="Type your message here...." required
+                tabindex="5"></textarea>
+            <button>Submit</button>
+            <p class="p3">Designed by <a href="#">Colorlib</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

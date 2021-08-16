@@ -13,7 +13,12 @@ function myCheck() {
     checkRegister();
 }
 function checkRadioOrCheckbox(tagId, alertMessage) {
-    var kh = document.getElementById(tagId).children;
+    try {
+        var kh = document.getElementById(tagI).children;
+    }
+    catch (error) {
+        console.log(error.message);
+    } //将任何可能出错的代码放进这行语句中，如果有错则执行catch中的语句,message属性向用户显示错误消息
     var d = false;
     for (var i = 0; i < kh.length; i++) {
         if (kh[i].tagName == "INPUT" && kh[i].checked) {
