@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大数据热点图</title>
+    <style>
+        .box {
+            position: relative;
+            width: 700px;
+            height: 600px;
+            background: url(images/中国.jpg) no-repeat;
+            margin: 100px auto;
+        }
+
+        .city {
+            position: absolute;
+            top: 133px;
+            right: 220px;
+        }
+
+        .dotoed {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 50%;
+        }
+
+        .city div[class^="pa"] {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #009dfd;
+            animation-name: spread;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .city .pa1 {
+            animation-delay: .4s;
+        }
+
+        .city .pa2 {
+            animation-delay: .8s;
+        }
+
+        @keyframes spread {
+            0% {}
+
+            75% {
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="city">
+            <div class="dotoed"></div>
+            <div class="pa1"></div>
+            <div class="pa2"></div>
+            <div class="pa3"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
