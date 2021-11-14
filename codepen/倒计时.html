@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .big {
+            width: 240px;
+            height: 340px;
+            background-color: rgb(229, 44, 32);
+            background-image: url(../images/购物.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 50px auto;
+        }
+
+        .head {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .middle {
+            font-size: 16px;
+            text-align: center;
+            color: white;
+            margin-top: 140px;
+        }
+
+        .inner {
+            font-weight: bold;
+        }
+
+        .down {
+            text-align: center;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+        .down span {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            float: left;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(14, 15, 15);
+            /* margin-left: 10px; */
+            padding-top: 8px;
+            color: white;
+        }
+
+        .down .str {
+            background-color: transparent;
+            width: 20px;
+            padding-top: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='big'>
+        <div class='head'>小刘秒杀</div>
+        <div class='middle'> <span class='inner'>2021</span> 距结束</div>
+        <div class='down'>
+            <span class='hour'>1</span>
+            <span class='str'>:</span>
+            <span class='min'>2</span>
+            <span class='str'>:</span>
+            <span class='second'>3</span>
+        </div>
+    </div>
+    <script>
+        var hour = document.querySelector('.hour');
+        var min = document.querySelector('.min');
+        var second = document.querySelector('.second');
+        var inputTime = +new Date('2022-1-1 00:00:00');//带参数，这是输入时间的毫秒数，为什么隔一天就不行了
+        countDown();//先调用一次，这样就不会出现每次刷新返回原先存在的值
+        setInterval(countDown, 1000);
+        function countDown() {
+            var nowTime = +new Date();//无参数就是现在的毫秒数
+            var times = (inputTime - nowTime) / 1000;//总秒数
+            var h = parseInt(times / 60 / 60);
+            h = h < 10 ? '0' + h : h;
+            hour.innerHTML = h;
+            var m = parseInt(times / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            min.innerHTML = m;
+            var s = parseInt(times % 60);
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>
