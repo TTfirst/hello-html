@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东放大镜</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .present_image {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .present_image img {
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+        }
+
+        .present_image .cover {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background-color: #FEDE4F;
+            opacity: .4;
+            cursor: move;
+        }
+
+        .magnify {
+            display: none;
+            position: absolute;
+            left: 450px;
+            top: 50px;
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid black; */
+            /* 提升层级 */
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .magnify img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class='present_image'>
+            <img src="images/MTK.jpg" alt="MTK芯片">
+            <div class='cover'></div>
+        </div>
+        <div class='magnify'>
+            <img src="images/MTK2.png" alt="放大版MTK芯片" class='big_image'>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            var present_image = document.querySelector('.present_image');
+            var cover = document.querySelector('.cover');
+            var magnify = document.querySelector('.magnify');
+            present_image.addEventListener('mouseover', function () {
+                cover.style.display = 'block';
+                magnify.style.display = 'block';
+            })
+            present_image.addEventListener('mouseout', function () {
+                cover.style.display = 'none';
+                magnify.style.display = 'none';
+            })
+            present_image.addEventListener('mousemove', function (e) {//将鼠标在盒子内的坐标给遮盖层
+                var x = e.pageX - this.offsetLeft;
+                var y = e.pageY - this.offsetTop;
+                var coverX = x - cover.offsetWidth / 2;//鼠标的位置
+                var coverY = y - cover.offsetHeight / 2;
+                if (coverX <= 0) {
+                    coverX = 0;
+                }
+                else if (coverX >= present_image.offsetWidth - cover.offsetWidth) {
+                    coverX = present_image.offsetWidth - cover.offsetWidth;
+                }
+                if (coverY <= 0) {
+                    coverY = 0;
+                } else if (coverY >= present_image.offsetHeight - cover.offsetHeight) {
+                    coverY = present_image.offsetHeight - cover.offsetHeight;
+                }
+                cover.style.left = coverX + 'px';
+                cover.style.top = coverY + 'px';
+
+                //将放大盒子与cover进行比例放大  *****大图片的移动距离 = 遮挡层移动距离*大图片最大移动距离/遮挡层的最大移动距离
+                var big_image = document.querySelector('.big_image');
+                var coverMax = present_image.offsetHeight - cover.offsetHeight;
+                var big_imageMax = big_image.offsetWidth - magnify.offsetWidth;//因为这是正方形，所以左与上都是一样的
+                var big_imageMoveX = coverX * big_imageMax / coverMax;
+                var big_imageMoveY = coverY * big_imageMax / coverMax;
+                big_image.style.left = -big_imageMoveX + 'px';
+                big_image.style.top = -big_imageMoveY + 'px';
+            })
+        })
+    </script>
+</body>
+
+</html>
