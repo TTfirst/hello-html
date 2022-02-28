@@ -5,86 +5,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主页面</title>
-    <style>
-        body {
-            background: url(images/index.jpg) no-repeat center center;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        @font-face {
-            font-family: myFirstFont;
-            src: url(王汉宗中行书繁.ttf);
-        }
-
-        h2 {
-            font-family: myFirstFont, "宋体";
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-
-
-        a:visited {
-            /* 已访问的链接 */
-            color: orange;
-        }
-
-        a:link {
-            /* 未访问的链接 */
-            color: palegreen;
-        }
-
-        a:hover {
-            /* 鼠标放上去 */
-            color: green;
-        }
-
-        a:active {
-            /* 鼠标点击时 */
-            color: salmon;
-        }
-
-        /* 上述链接的形态必须严格按照顺序排列，hover必须在link和visited之后，active必须在hover之后 */
-        div {
-            float: left;
-        }
-
-        .document-two {
-            margin-left: 20px;
-        }
-    </style>
+    <title>welcome</title>
+    <link rel="shortcut icon" href="symbol.ico" />
+    <link rel="stylesheet" href="css/new-index.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/Jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="document-one">
-        <h2><a href="index1.html">1.Pattern login registration page(花样登录注册页面)</a></h2>
-        <h2><a href="table.html">2.table(表格)</a></h2>
-        <h2><a href="table-two.html">3.table-two</a></h2>
-        <h2><a href="form-check.html">4.form(表单)</a></h2>
-        <h2><a href="shopping.html">5.shopping</a></h2>
-        <h2><a href="button-hover.html">6.button-hover.html</a></h2>
-        <h2><a href="button-hover2.html">7.button-hover2</a></h2>
-        <h2><a href="button-animation.html">8.button-animation</a></h2>
-        <h2><a href="making-number-generation.html">9.making-number-generation(营销号生成器)</a></h2>
-        <h2><a href="pricing-card-design.html">10.pricing-card-design(价格卡片设计)</a></h2>
-        <h2><a href="Enlarge-number.html">11.Enlarge-number(订单号放大)</a></h2>
-        <h2><a href="Responsive-shoppingCart.html">12.Responsive-shoppingCart(响应购物车)</a></h2>
-        <h2><a href="contact-form.html">13.contact-form(表格提示)</a></h2>
-        <h2><a href="contact-form2css版.html">14.contact-form2(纯css版)</a></h2>
-    </div>
-    <div class="document-two">
-        <h2><a href="(动画)大数据热点图.html">15.(动画)大数据热点图</a></h2>
-        <h2><a href="smooth-anchor-scrolling.html">16.smooth-anchor-scrolling(锚链接)</a></h2>
-        <h2><a href="倒计时.html">17.距离2021结束</a></h2>
-        <h2> <a href="京东magnify(放大).html">18.京东放大镜</a> </h2>
-        <H2><a href="js数组/删除数组中重复出现.html">19.删除数组中重复元素</a></H2>
-    </div>
+    <!-- 导航条************************* -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">分类</a>
+            </div>
 
-
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="register.html">注册页面</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入要搜索的内容">
+                    </div>
+                    <button type="submit" class="btn btn-default">提交</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 sty">
+                <img src="images/购物.png" alt="不显示换下一张" class="set-img">
+                <p class="introduce">点击此图片进入注册页面</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 sty">
+                <img src="images/购物.png" alt="不显示换下一张" class="set-img">
+            </div>
+            <div class="col-lg-3 col-md-6  col-sm-6 sty">
+                <img src="images/购物.png" alt="不显示换下一张" class="set-img">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 sty">
+                <img src="images/购物.png" alt="不显示换下一张" class="set-img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 sty">
+                <img src="images/购物.png" alt="不显示换下一张" class="set-img">
+                <p class="introduce">点击此图片进入注册页面</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 sty">
+                <img src="images/购物.png" alt="不显示换下一张" class="set-img">
+            </div>
+            <div class="col-lg-3 col-md-6  col-sm-6 sty">
+                <img src="images/购物.png" alt="不显示换下一张" class="set-img">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 sty">
+                <img src="images/购物.png" alt="不显示换下一张" class="set-img">
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
