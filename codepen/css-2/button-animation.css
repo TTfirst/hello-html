@@ -1,0 +1,659 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(224, 229, 236);
+}
+.buttons {
+    width: 1300px;
+    margin: 10px auto;
+    text-align: center;
+}
+.buttons h1 {
+    font-family: "宋体";
+    font-size: 50px;
+    color: rgb(53, 53, 53);
+}
+.buttons .p-one {
+    color: rgb(103, 103, 103);
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.buttons .button {
+    margin-left: 58px;
+}
+button {
+    width: 105px;
+    height: 35px;
+    /* background-color: green; */
+    border: 0;
+    border-radius: 5px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    /* 上，左，下，右 */
+    box-shadow: 2px 2px 3px 0px #ccc, 2px 2px 3px 0px #ccc, inset 2px 2px 4px 1px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px 1px rgba(255, 255, 255, 0.3);
+
+    color: white;
+    cursor: pointer;
+    /* box-shadow: 2px 2px 4px 1px rgba(255, 255, 255, 0.3); */
+    /* 设置透明度是为了只让一边又阴影 */
+}
+.button1-1 {
+    background-color: rgb(10, 20, 158);
+    /* 内侧阴影和外侧阴影x，y方向是反过来的 */
+}
+.button1-1:hover {
+    background-image: linear-gradient(rgb(2, 107, 251), rgb(0, 19, 254));
+}
+/* button1-2--------- */
+.button1-2 {
+    background-image: linear-gradient(rgb(125, 6, 240), rgb(101, 8, 240));
+}
+.button1-2:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+/* button1-3------ */
+.button1-3 {
+    box-shadow: none;
+}
+.button1-3 span {
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    width: 105px;
+    height: 35px;
+    background-color: rgb(2, 135, 249);
+    border: 0;
+    border-radius: 5px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    /* 上，左，下，右 */
+    box-shadow: 3px 3px 3px 0px #ccc, 3px 3px 3px 0px #ccc, inset 2px 2px 4px 1px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px 1px rgba(255, 255, 255, 0.3);
+}
+.button1-3 span:hover {
+    background-color: rgb(224, 229, 236);
+    color: rgb(2, 126, 250);
+    box-shadow: none;
+}
+.button1-3 span::before,
+.button1-3 span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.button1-3 span::before {
+    top: 0;
+    right: 0;
+}
+.button1-3 span::after {
+    bottom: 0;
+    left: 0;
+}
+.button1-3 span:hover::before {
+    border-top: 2px solid rgb(2, 126, 251);
+    border-right: 2px solid rgb(2, 126, 251);
+    width: 98%;
+    height: 94%;
+    transition: width 0.4s linear, height 0.4s linear;
+}
+.button1-3 span:hover::after {
+    border-bottom: 2px solid rgb(2, 126, 251);
+    border-left: 2px solid rgb(2, 126, 251);
+    width: 98%;
+    height: 94%;
+    transition: width 0.4s linear, height 0.4s linear;
+}
+/* button1-4---------- */
+.button1-4 {
+    background-image: linear-gradient(to right, rgb(150, 228, 223), rgb(99, 211, 205));
+}
+.button1-4:hover {
+    background-image: linear-gradient(to right, rgb(3, 200, 168), rgb(103, 212, 200));
+}
+/* button1-5----------- */
+.button1-5 {
+    box-shadow: none;
+}
+.button1-5 span {
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    width: 105px;
+    height: 35px;
+    background-color: rgb(253, 44, 0);
+    border: 0;
+    border-radius: 5px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    /* 上，左，下，右 */
+    box-shadow: 3px 3px 3px 0px #ccc, 3px 3px 3px 0px #ccc, inset 2px 2px 4px 1px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px 1px rgba(255, 255, 255, 0.3);
+}
+.button1-5 span:hover {
+    background-color: rgb(223, 228, 235);
+    color: rgb(239, 9, 141);
+    box-shadow: none;
+}
+.button1-5 span::before,
+.button1-5 span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.button1-5 span::before {
+    top: 0;
+    right: 0;
+}
+.button1-5 span::after {
+    bottom: 0;
+    left: 0;
+}
+.button1-5 span:hover::before {
+    border-top: 2px solid rgb(240, 9, 74);
+    width: 100%;
+    transition: width 0.3s linear;
+}
+.button1-5 span:hover::after {
+    border-bottom: 2px solid rgb(240, 9, 74);
+    width: 100%;
+    transition: width 0.3s ease-out;
+}
+/* button1-6---------- */
+/* .button1-6 {
+    background-image: linear-gradient(
+        to right,
+        rgb(126, 173, 238),
+        rgb(179, 162, 218),
+        rgb(232, 153, 198),
+        rgb(179, 162, 218),
+        rgb(126, 173, 238)
+    );
+} */
+.button1-6 {
+    position: relative;
+    background: rgb(247, 150, 192);
+    background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+}
+.button1-6 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 35px;
+}
+.button1-6::after,
+.button1-6::before {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+    box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1), -4px -4px 5px 0px rgba(255, 255, 255, 1),
+        7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.button1-6::before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+}
+.button1-6::after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+}
+.button1-6:hover {
+    background: transparent;
+    color: #76aef1;
+    box-shadow: none;
+}
+.button1-6:hover::before {
+    transition: all 500ms ease;
+    height: 100%;
+}
+.button1-6:hover::after {
+    transition: all 500ms ease;
+    height: 100%;
+}
+.button1-6 span::before,
+.button1-6 span::after {
+    position: absolute;
+    content: "";
+    box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1), -4px -4px 5px 0px rgba(255, 255, 255, 1),
+        7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.button1-6 span::before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 0.5px;
+    transition: all 500ms ease;
+}
+.button1-6 span::after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 0.5px;
+    transition: all 500ms ease;
+}
+.button1-6 span:hover::before {
+    width: 100%;
+}
+.button1-6 span:hover::after {
+    width: 100%;
+}
+
+/* button1-7---------- */
+.button1-7 span {
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    width: 105px;
+    height: 35px;
+    background-image: linear-gradient(rgb(251, 86, 1), rgb(255, 145, 1));
+    border: 0;
+    border-radius: 5px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    /* 上，左，下，右 */
+    box-shadow: 3px 3px 3px 0px #ccc, 3px 3px 3px 0px #ccc, inset 2px 2px 4px 1px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px 1px rgba(255, 255, 255, 0.3);
+}
+.button1-7 span::before,
+.button1-7 span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.button1-7 span::before {
+    top: 0;
+    left: 0;
+}
+.button1-7 span::after {
+    bottom: 0;
+    right: 0;
+}
+.button1-7 span:hover {
+    background: transparent;
+    color: rgb(245, 141, 83);
+}
+.button1-7 span:hover::before {
+    width: 98%;
+    height: 94%;
+    border-top: 2px solid rgb(251, 75, 2);
+    border-left: 2px solid rgb(251, 75, 2);
+    transition: width 0.4s linear, height 0.4s linear, box-shadow 0.4s linear;
+    box-shadow: inset 1px 1px 3px 0 #777;
+}
+.button1-7 span:hover::after {
+    width: 98%;
+    height: 94%;
+    border-bottom: 2px solid rgb(251, 75, 2);
+    border-right: 2px solid rgb(251, 75, 2);
+    transition: width 0.4s linear, height 0.4s linear, box-shadow 0.4s linear;
+    box-shadow: 1px 1px 3px 0 rgba(98, 100, 104);
+}
+/* button2 button2-1 -------------*/
+.button2-1 {
+    position: relative;
+    background-color: #f0ecfc;
+    background-image: linear-gradient(to right, rgb(199, 151, 235), rgb(232, 220, 249));
+}
+.button2-1 span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 35px;
+}
+.button2-1:hover {
+    background: transparent;
+    color: rgb(210, 184, 235);
+}
+.button2-1::before,
+.button2-1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(199, 151, 235);
+    transition: all 0.3s linear;
+}
+.button2-1::before {
+    width: 2px;
+    height: 0;
+}
+.button2-1::after {
+    height: 2px;
+    width: 0;
+}
+.button2-1:hover::before {
+    height: 100%;
+}
+.button2-1:hover::after {
+    width: 100%;
+}
+.button2-1 span::before,
+.button2-1 span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(199, 151, 235);
+    transition: all 0.3s linear;
+}
+.button2-1 span::before {
+    width: 2px;
+    height: 0;
+}
+.button2-1 span::after {
+    height: 2px;
+    width: 0;
+}
+.button2-1 span:hover::before {
+    height: 100%;
+}
+.button2-1 span:hover::after {
+    width: 100%;
+}
+/* button2-2-------- */
+.button2-2 {
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+}
+.button2-2::after {
+    position: absolute;
+    content: " ";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    transition: all 0.3s ease;
+}
+.button2-2:hover {
+    background: transparent;
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+    color: #fff;
+}
+.button2-2:hover::after {
+    -webkit-transform: scale(2) rotate(180deg);
+    transform: scale(2) rotate(180deg);
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+}
+/* button2-3-------- */
+.button2-3 {
+    position: relative;
+    background: #ccc;
+    background-image: linear-gradient(rgb(45, 97, 243), rgb(25, 22, 240));
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+.button2-3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.1);
+    transition: all 0.3s linear;
+}
+.button2-3:hover {
+    background: transparent;
+}
+.button2-3:hover:after {
+    background: rgb(0, 3, 255);
+    background: linear-gradient(0deg, rgba(2, 126, 251, 1) 0%, rgba(0, 3, 255, 1) 100%);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+/* button2-4---------- */
+.button2-4 {
+    position: relative;
+    background: rgb(251, 33, 117);
+    background: linear-gradient(0deg, rgba(251, 33, 117, 1) 0%, rgba(234, 76, 137, 1) 100%);
+    overflow: hidden;
+}
+.button2-4:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.button2-4::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+.button2-4:hover {
+    opacity: 0.7;
+}
+.button2-4:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+@-webkit-keyframes shiny-btn1 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
+/* button2-5------- */
+.button2-5 {
+    position: relative;
+    right: 0px;
+    bottom: 20px;
+    border: none;
+    box-shadow: none;
+    width: 105px;
+    height: 35px;
+    line-height: 35px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+    background: transparent;
+}
+.button2-5 span {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    display: block;
+    position: absolute;
+    width: 105px;
+    height: 35px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.button2-5 span:nth-child(1) {
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+.button2-5 span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+.button2-5:hover span:nth-child(1) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.button2-5:hover span:nth-child(2) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    color: transparent;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+/* button2-6----- */
+.button2-6 {
+    position: relative;
+    background-color: #89d8d3;
+    background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+    z-index: 1;
+}
+.button2-6::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: #4dccc6;
+    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+.button2-6:hover {
+    color: #fff;
+}
+.button2-6:hover::after {
+    top: 0;
+    height: 100%;
+}
+.button2-6:active {
+    top: 2px;
+}
+/* .button2-7-------- */
+.button2-7 {
+    position: relative;
+    background-color: rgb(255, 151, 0);
+    z-index: 1;
+    overflow: hidden;
+}
+.button2-7:hover {
+    color: rgb(0, 0, 0);
+}
+.button2-7::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(236, 249, 52);
+    z-index: -1;
+    transition: all 0.3s linear;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.button2-7:hover::after {
+    top: auto;
+    height: 100%;
+    bottom: 0;
+}
+.button2-7:active {
+    top: 2px;
+}
+/* last-button-1-- */
+.last-button-1 {
+    position: relative;
+    background-color: rgb(182, 33, 254);
+    z-index: 1;
+    overflow: hidden;
+}
+.last-button-1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgb(102, 61, 255);
+    z-index: -1;
+    transition: all 0.3s linear;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.last-button-1:hover::after {
+    width: 100%;
+    right: auto;
+    left: 0;
+}
+.last-button-1:active {
+    top: 2px;
+}
+/* last-button-2---- */
+.last-button-2 {
+    color: #000;
+    position: relative;
+    background-color: rgb(224, 229, 236);
+}
+.last-button-2::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+.last-button-2:hover {
+    color: #000;
+}
+.last-button-2:hover::after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+.last-button-2:active {
+    top: 2px;
+}
+/* 要想要细线自己缩回去得使用两对after和before伪元素 */

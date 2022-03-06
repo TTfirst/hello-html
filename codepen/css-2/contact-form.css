@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(76, 175, 80);
+}
+
+.form {
+    position: relative;
+    background-color: rgb(249, 249, 249);
+    width: 430px;
+    height: 540px;
+    margin: 50px auto;
+    padding-left: 22px;
+    padding-top: 16px;
+    box-shadow: 0px 1px 10px -1px #000;
+}
+
+form .p1 {
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(119, 119, 119);
+}
+
+form .p2 {
+    margin: 10px 0;
+    color: rgb(119, 139, 186);
+}
+
+form input,
+form button {
+    width: 370px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    outline: none;
+}
+form input:hover,
+form textarea:hover {
+    border: 1px solid #aaa;
+    transition: border-color 0.3s linear;
+}
+form input:focus,
+form textarea:focus {
+    border: 1px solid #aaa;
+}
+form textarea {
+    width: 370px;
+    height: 120px;
+    margin-top: 10px;
+    padding-top: 5px;
+    /* 不能随意改变大小 */
+    resize: none;
+}
+
+form button {
+    color: white;
+    background-color: rgb(76, 175, 80);
+    border: 0;
+    /* cursor属性是指定鼠标的光标 */
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #43a047;
+    transition: background-color 0.3s linear;
+}
+form button:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* active点击的效果 */
+}
+.p3 {
+    font-size: 10px;
+    color: #ccc;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: -22px;
+}
+
+/* ------------ */
+.display1 {
+    position: absolute;
+    left: 100px;
+    width: 120px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 4px -1px rgb(0, 0, 0, 20%);
+    display: none;
+    transition: display 0.2s;
+}
+
+.display1::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 8px solid #000;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #ccc transparent;
+}
+
+.display-5 {
+    margin-top: 3px;
+}

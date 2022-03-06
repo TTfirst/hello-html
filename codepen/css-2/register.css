@@ -1,0 +1,84 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+header {
+    height: 84px;
+    border-bottom: 2px solid red;
+}
+.logo img {
+    padding-top: 10px;
+}
+.register {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.register h3 {
+    line-height: 42px;
+    height: 42px;
+    background-color: #ececec;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+}
+.register .hp {
+    float: right;
+    font-size: 14px;
+}
+.bd {
+    width: 500px;
+    margin: 50px auto;
+}
+.bd ul li {
+    padding-bottom: 24px;
+}
+.bd ul li label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+.bd ul li .cd {
+    width: 183px;
+    height: 27px;
+    border: 1px solid #ccc;
+}
+.bd ul li .dd {
+    font-size: 13px;
+    color: red;
+}
+.fd {
+    padding: 0 140px;
+}
+.fd em {
+    padding: 0 5px;
+}
+.fd .rou {
+    background-color: #de1111;
+}
+.fd .zhong {
+    background-color: #098b2a;
+}
+.fd .qiang {
+    background-color: #f79100;
+}
+.ed {
+    padding-left: 64px;
+}
+.gd {
+    padding-left: 116px;
+}
+.gd .hd {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(219, 13, 13);
+    color: white;
+}

@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* css3盒子模式 */
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: rgb(247, 247, 255);
+}
+
+.box {
+    text-align: center;
+    position: relative;
+    /* width: 600px; */
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.box h2 {
+    color: rgb(109, 112, 141);
+    margin-bottom: 30px;
+}
+
+.box p {
+    color: rgb(179, 181, 198);
+}
+
+.box p button {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    border: 0;
+    border-radius: 15px;
+    margin: 0 10px;
+    background-color: rgb(124, 129, 227);
+    vertical-align: bottom;
+}
+
+.box p button .circle {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 20px;
+    height: 21px;
+    border-radius: 13px;
+    background-color: rgb(255, 255, 255);
+}
+
+.main {
+    position: relative;
+    width: 1040px;
+    height: 570px;
+    margin: 60px auto;
+    border-radius: 12px;
+    box-shadow: -4px 4px 17px rgb(228, 228, 235);
+    background-color: rgb(255, 255, 255);
+}
+
+.main .left {
+    float: left;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.left h4 {
+    color: rgb(109, 112, 141);
+    padding-left: 16px;
+    font-size: 22px;
+}
+
+.left ul li:first-child {
+    color: rgb(73, 76, 95);
+    font-size: 54px;
+    font-weight: 700;
+    height: 100px;
+}
+
+.left ul li:last-child {
+    border-bottom: 0;
+}
+
+.left ul {
+    width: 250px;
+    margin: 0 atuo;
+    margin-top: 50px;
+}
+
+.left ul li {
+    color: rgb(109, 112, 141);
+    border-bottom: 1px solid #ccc;
+    width: 250px;
+    height: 62px;
+    text-align: center;
+    line-height: 62px;
+    margin-left: 36px;
+    font-weight: 700;
+}
+
+.left ul li button {
+    width: 250px;
+    height: 40px;
+    background-image: linear-gradient(to right, rgb(154, 159, 237), rgb(118, 124, 225));
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.main .right {
+    float: right;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.right h4 {
+    color: rgb(109, 112, 141);
+    padding-right: 16px;
+    font-size: 22px;
+}
+
+.right ul li:first-child {
+    color: rgb(73, 76, 95);
+    font-size: 54px;
+    font-weight: 700;
+    height: 100px;
+}
+
+.right ul li:last-child {
+    border-bottom: 0;
+}
+
+.right ul {
+    width: 250px;
+    margin: 0 atuo;
+    margin-top: 50px;
+}
+
+.right ul li {
+    color: rgb(109, 112, 141);
+    border-bottom: 1px solid #ccc;
+    width: 250px;
+    height: 62px;
+    text-align: center;
+    line-height: 62px;
+    margin-right: 36px;
+    font-weight: 700;
+}
+
+.right ul li button {
+    width: 250px;
+    height: 40px;
+    background-image: linear-gradient(to right, rgb(154, 159, 237), rgb(118, 124, 225));
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.main .middle {
+    position: absolute;
+    top: -22px;
+    left: 313px;
+    width: 400px;
+    height: 620px;
+    background-color: rgb(140, 145, 232);
+    border-radius: 11px;
+}
+
+.middle h4 {
+    color: rgb(255, 255, 255);
+    /* padding-right: 16px; */
+    margin-top: 42px;
+    font-size: 22px;
+}
+
+.middle ul li:first-child {
+    /* color: rgb(73, 76, 95); */
+    font-size: 54px;
+    font-weight: 700;
+    height: 100px;
+}
+
+.middle ul li:last-child {
+    border-bottom: 0;
+}
+
+.middle ul {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.middle ul li {
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid #ccc;
+    width: 250px;
+    height: 62px;
+    text-align: center;
+    line-height: 62px;
+    /* margin-right: 36px; */
+    font-weight: 700;
+}
+
+.middle ul li button {
+    width: 250px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(105, 111, 221);
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 30px;
+}
