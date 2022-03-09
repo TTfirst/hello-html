@@ -7,6 +7,9 @@ a {
     text-decoration: none;
 }
 /* 设置导航栏 */
+.hide_nav {
+    display: block;
+}
 .set_one_a_size {
     font-size: 24px;
     font-weight: 700;

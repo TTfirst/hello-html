@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="bootstrap/js/Jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js-2/index.js"></script>
 </head>
 
 <body>
@@ -19,29 +20,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-1"><a href="javascript:;" class="set_one_a_size">welcome</a> </div>
-                <div class="col-lg-2"><a href="javascript:;" class="set_next_a_size">Link</a></div>
-                <div class="col-lg-2"><a href="javascript:;" class="set_next_a_size">Feature</a></div>
-                <div class="col-lg-2"><a href="javascript:;" class="set_next_a_size">Everyday</a></div>
-                <div class="col-lg-2"><a href="javascript:;" class="set_next_a_size">if-one-day</a></div>
-                <div class="col-lg-2 col-lg-offset-1">
-                    <!-- 设置一个下拉菜单 -->
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-danger set_bc">Content</button>
-                        <button type="button" class="btn btn-danger dropdown-toggle set_bc" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="(动画)大数据热点图.html">热点大数据图</a></li>
-                            <li><a href="倒计时.html" class="set_hover">倒计时</a></li>
-                            <li><a href="京东magnify(放大).html">放大页面</a></li>
-                            <!-- 设置分隔符-->
-                            <li role="separator" class="divider"></li>
-                            <li><a href="button-animation.html">button-colourful</a></li>
-                            <li><a href="contact-form.html">表单相关联</a></li>
-                            <li><a href="javascript:;">Photo</a></li>
-                        </ul>
+                <!-- 装填四个导航栏 -->
+                <div class="hide_nav">
+                    <div class="col-lg-2"><a href="javascript:;" class="set_next_a_size">Link</a></div>
+                    <div class="col-lg-2"><a href="javascript:;" class="set_next_a_size">Feature</a></div>
+                    <div class="col-lg-2"><a href="javascript:;" class="set_next_a_size">Everyday</a></div>
+                    <div class="col-lg-2"><a href="javascript:;" class="set_next_a_size">if-one-day</a></div>
+                    <div class="col-lg-2 col-lg-offset-1">
+                        <!-- 设置一个下拉菜单 -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger set_bc">Content</button>
+                            <button type="button" class="btn btn-danger dropdown-toggle set_bc" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="(动画)大数据热点图.html">热点大数据图</a></li>
+                                <li><a href="倒计时.html" class="set_hover">倒计时</a></li>
+                                <li><a href="京东magnify(放大).html">放大页面</a></li>
+                                <!-- 设置分隔符-->
+                                <li role="separator" class="divider"></li>
+                                <li><a href="button-animation.html">button-colourful</a></li>
+                                <li><a href="contact-form.html">表单相关联</a></li>
+                                <li><a href="javascript:;">Photo</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,6 +93,13 @@
             </div>
         </div>
     </div>
+    <script>
+        var hide_nav = document.querySelector(".hide_nav");
+        if (document.body.clientWidth < 400) {
+            hide_nav.style.display = "none";
+        }
+        console.log(document.body.clientWidth);
+    </script>
 </body>
 
 </html>
