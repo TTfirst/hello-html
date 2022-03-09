@@ -39,7 +39,38 @@ a {
     line-height: 50px;
     z-index: 999;
 }
-
+/* 设置背景图片 */
+.bc_image {
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 360px;
+    border: 1px solid green;
+}
+.bc_image::after {
+    height: 360px;
+    width: 100%;
+    content: "";
+    /* 将伪元素修改为块级元素 */
+    display: block;
+    position: absolute;
+    top: 0;
+    background: url(../images/dream1.jpg) no-repeat;
+    /* 设置成100%，100%能够将宽高拉伸到内容区域的最大，这是拉升(宽 高) */
+    background-size: 100% 100%;
+    /* position:是图片所处的位置 */
+    background-position: center center;
+    opacity: 0.4;
+}
+/* .insert_image {
+    background-image: url(../images/bb.jpg) no-repeat;
+}
+.text {
+    width: 100%;
+    height: 360px;
+} */
 @font-face {
     font-family: myFirstFont;
     src: url(../王汉宗中行书繁.ttf);
