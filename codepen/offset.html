@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>偏移量</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 100px;height: 200px; border:1px solid red;position: relative; margin-left:20px;">
+        <div style="width:50px;height:100px;border:1px solid green; position:absolute;top:10px;left:10px; margin-top:20px; padding-top:20px"
+            id="div_">123
+        </div>
+    </div>
+    <script>
+        var div_ = document.querySelector("#div_");
+        console.log(div_.offsetLeft);//这个属性是相对于父级盒子的边框相比较的
+        console.log(div_.offsetTop);
+        console.log(div_.clientHeight);//不包含边框，margin以及padding值
+        console.log(div_.offsetWidth);//包含边框，内边距，不包含外边距
+        console.log(div_.offsetHeight);
+    </script>
+</body>
+
+</html>

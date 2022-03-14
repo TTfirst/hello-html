@@ -12,6 +12,7 @@
     <script src="bootstrap/js/Jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js-2/index.js"></script>
+    <script src="js-2/cartoon.js"></script>
 </head>
 
 <body>
@@ -54,7 +55,7 @@
     <!-- 设置背景图片 -->
     <div class="bc_image">
         <div class=".container-fluid">
-            <h1>这是一张非常好的family照片</h1>
+            <h1>夕阳之下只有无限的美好与憧憬</h1>
         </div>
     </div>
     <!-- <div class="heads">
@@ -70,7 +71,28 @@
         </div> -->
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 sty">
-                <img src="images/dream1.jpg" alt="不显示换下一张" class="set-img">
+
+                <div class="move">
+                    <!-- 设置上下按钮 -->
+                    <a href="javascript:;" class="glyphicon glyphicon-menu-up arrow arrow_up"></a>
+                    <a href="javascript:;" class="glyphicon glyphicon-menu-down arrow arrow_down"></a>
+
+                    <ul id="photo">
+                        <li>
+                            <img src="images/dream1.jpg" alt="不显示换下一张" class="set-img ">
+                        </li>
+                        <li>
+                            <img src="images/dream1-1.webp" alt="我是第二张" class="set-img ">
+                        </li>
+                        <li>
+                            <img src="images/dream1-2.webp" alt="我是第三张" class="set-img">
+                        </li>
+                    </ul>
+                    <ol class="circle">
+
+                    </ol>
+                </div>
+
                 <p class="introduce">点击此图片进入注册页面</p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 sty">
@@ -85,7 +107,7 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 sty">
-                <img src="images/formerly1.jpg" alt="不显示换下一张" class="set-img img-circle">
+                <!-- <img src="images/formerly1.jpg" alt="不显示换下一张" class="set-img img-circle"> -->
                 <p class="introduce">点击此图片进入注册页面 <span class=" glyphicon glyphicon-asterisk"> </span> </p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 sty">
@@ -100,11 +122,11 @@
         </div>
     </div>
     <script>
-        var hide_nav = document.querySelector(".hide_nav");
+        /* var hide_nav = document.querySelector(".hide_nav");
         if (document.body.clientWidth < 400) {
             hide_nav.style.display = "none";
         }
-        console.log(document.body.clientWidth);
+        console.log(document.body.clientWidth); */
     </script>
 </body>
 
