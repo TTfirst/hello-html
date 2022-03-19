@@ -13,10 +13,14 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js-2/index.js"></script>
     <script src="js-2/cartoon.js"></script>
+    <script src="js-2/cartoon1.js"></script>
 </head>
 
 <body>
     <!-- 导航条************************* -->
+    <div class="ad">
+        <img src="images/中国.jpg" alt="这是咱中国">
+    </div>
     <div class="nav_h">
         <div class="container">
             <div class="row">
@@ -63,7 +67,7 @@
     </div> -->
     <!-- 按钮 -->
     <!-- Split button -->
-    <div class="container change">
+    <div class="container change_fake">
         <!-- <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 heads">
                 <img src="images/very_cute.jpg" alt="我很可爱你不要怀疑！！！" id="cute">
@@ -106,8 +110,29 @@
             </div>
         </div>
         <div class="row">
+            <!-- 创建第二个轮播图 -->
             <div class="col-lg-3 col-md-6 col-sm-6 sty">
-                <!-- <img src="images/formerly1.jpg" alt="不显示换下一张" class="set-img img-circle"> -->
+                <div class="move_two">
+                    <a href="javascript:;" class="glyphicon glyphicon-menu-left arrow arrow_left"></a>
+                    <a href="javascript:;" class="glyphicon glyphicon-menu-right arrow arrow_right"></a>
+                    <ul class="play_picture">
+                        <li>
+                            <img src="images/formerly1.jpg" alt="不显示换下一张" class="set-img img-circle">
+                        </li>
+                        <li>
+                            <img src="images/formerly1.1.webp" alt="不显示换下一张" class="set-img img-circle">
+                        </li>
+                        <li>
+                            <img src="images/formerly1.2.webp" alt="不显示换下一张" class="set-img img-circle">
+                        </li>
+                        <li>
+                            <img src="images/formerly1.3.webp" alt="不显示换下一张" class="set-img img-circle">
+                        </li>
+                    </ul>
+                    <ol class="circle_two">
+
+                    </ol>
+                </div>
                 <p class="introduce">点击此图片进入注册页面 <span class=" glyphicon glyphicon-asterisk"> </span> </p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 sty">
@@ -127,6 +152,9 @@
             hide_nav.style.display = "none";
         }
         console.log(document.body.clientWidth); */
+        setInterval(function () {
+            $(".ad").hide();
+        }, 3000);
     </script>
 </body>
 

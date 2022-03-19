@@ -50,7 +50,7 @@ li {
     margin-top: 50px;
     width: 100%;
     height: 360px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 .bc_image::after {
     height: 360px;
@@ -99,16 +99,19 @@ li {
     height: 200px;
 }
 /* container模块 */
-.change {
+.change_fake {
     margin-top: 300px;
 }
-.move {
+/* 制作一号轮播图-start */
+.move,
+.move_two {
     position: relative;
     width: 100%;
     height: 200px;
     overflow: hidden;
 }
-.move ul {
+.move ul,
+.move_two ul {
     position: absolute;
     top: 0;
     left: 0;
@@ -116,21 +119,22 @@ li {
     width: 100%;
     z-index: -1;
 }
-.move .arrow_up {
+.move .arrow,
+.move_two .arrow {
     display: none;
     font-size: 30px;
     text-decoration: none;
     position: absolute;
-    top: 0;
-    left: 47%;
 }
 .move .arrow_down {
-    display: none;
-    text-decoration: none;
-    font-size: 30px;
-    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -15px;
+}
+.move .arrow_up {
     top: 174px;
-    left: 47%;
+    left: 50%;
+    margin-left: -15px;
 }
 .circle {
     /* height: 80px; */
@@ -138,7 +142,8 @@ li {
     top: 40px;
     right: 10px;
 }
-.circle li {
+.circle li,
+.circle_two li {
     display: block;
     width: 20px;
     height: 20px;
@@ -149,14 +154,57 @@ li {
 .circle .change {
     background-color: green;
 }
+/* end**************** */
 .set-img {
     /* display: block; */
     width: 100%;
     height: 200px;
+}
+/* 制作第二个轮播图start */
+.move_two ul {
+    width: 600%;
+}
+.move_two ul li {
+    width: 262.5px;
+    height: 100%;
+    float: left;
+}
+.move_two .arrow_left {
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+}
+.move_two .arrow_right {
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+}
+.circle_two {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+}
+.circle_two li {
+    float: left;
+    margin-left: 1px;
+}
+.circle_two .change_two {
+    background-color: pink;
 }
 .introduce {
     text-align: center;
     font-size: 18px;
     margin-top: 20px;
     font-family: myFirstFont, "宋体";
+}
+/* 广告条 */
+.ad {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    margin-left: -250px;
+    z-index: 1;
+    opacity: 0.8;
 }
