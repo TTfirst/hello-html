@@ -144,7 +144,7 @@ li {
 }
 .circle li,
 .circle_two li {
-    display: block;
+    display: none;
     width: 20px;
     height: 20px;
     border-radius: 10px;
