@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
 
     var arrow_up = this.document.querySelector(".arrow_up");
     var arrow_down = this.document.querySelector(".arrow_down");
-    var timer;
+    // var timer;
     //1.鼠标经过显示左右按钮，鼠标移开隐藏左右按钮
     move.addEventListener('mouseenter', function () {
         arrow_up.style.display = 'block';
@@ -14,9 +14,9 @@ window.addEventListener('load', function () {
     move.addEventListener('mouseleave', function () {
         arrow_up.style.display = 'none';
         arrow_down.style.display = 'none';
-        /*   timer = setInterval(function () {
-              arrow_down.click();//手动点击
-          }, 2500) */
+        timer = setInterval(function () {
+            arrow_down.click();//手动点击
+        }, 2500)
     })
     // 2.生成动态小圈圈
     var ul = document.querySelector("#photo");//根据ul中的li标签来创建ol中的li标签
@@ -96,6 +96,7 @@ window.addEventListener('load', function () {
     var move_two = document.querySelector(".move_two");
     var arrowL = document.querySelector(".arrow_left");
     var arrowR = document.querySelector(".arrow_right");
+    var timers;
     move_two.addEventListener('mouseenter', function () {
         arrowL.style.display = 'block';
         arrowR.style.display = 'block';
@@ -105,9 +106,9 @@ window.addEventListener('load', function () {
     move_two.addEventListener('mouseleave', function () {
         arrowL.style.display = 'none';
         arrowR.style.display = 'none';
-        /*  var timers = setInterval(function () {
-             arrowR.click();//手动点击,控制自动的方向
-         }, 2500) */
+        timers = setInterval(function () {
+            arrowR.click();
+        }, 3000)
     })
     //设置小圆圈
     var ols = move_two.querySelector(".circle_two");//ol
@@ -193,7 +194,7 @@ window.addEventListener('load', function () {
     var timer = setInterval(function () {
         arrow_down.click();//手动点击
     }, 2500)
-    var timers = this.setInterval(function () {
+    var timers = setInterval(function () {
         arrowR.click();
     }, 3000)
 })
