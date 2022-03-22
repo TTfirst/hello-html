@@ -99,7 +99,7 @@ window.addEventListener('load', function () {
     move_two.addEventListener('mouseenter', function () {
         arrowL.style.display = 'block';
         arrowR.style.display = 'block';
-        clearInterval(timer);
+        clearInterval(timers);
         timers = null;
     })
     move_two.addEventListener('mouseleave', function () {
